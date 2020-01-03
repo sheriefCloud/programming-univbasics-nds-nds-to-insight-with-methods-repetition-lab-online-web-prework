@@ -47,9 +47,10 @@ def total_gross(source)
   # return the total
   total_gross = 0
   dir_index = 0
-  dir_list = list_of_directors(source)
+  dir_list = list_of_directors(source) # Here I have an array of direcotr names that givs me the size of array 1
   while dir_index < dir_list.size do
-    total_gross += gross_for_director(dir_index)
+    d = source[dir_index]
+    total_gross += gross_for_director(d)
 
     dir_index += 1
   end
